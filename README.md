@@ -13,14 +13,15 @@ The algorithms are organized into two categories: supervised learning and unsupe
 - Linear Regression
 - KNN
 - K-Nearest Neighbors
-- (Decision Tree classifier)
+- CART
 
 ## Future plans
-- [ ] CART
 - [ ] Random Forest
 - [ ] RNNs
 - [ ] Gradient Boosting
 - [ ] CUDA optimizations
+- [ ] Transformers
+- [ ] rewrite in C
 
 ### AI usage
 AI was used mainly for visualizing the results of the algorithms and research. 
