@@ -11,7 +11,7 @@ The algorithms are organized into two categories: supervised learning and unsupe
 
 ### The currently implemented algorithms are:
 - Linear Regression
-- KNN
+- K-means
 - K-Nearest Neighbors
 - CART
 
