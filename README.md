@@ -16,7 +16,7 @@ The algorithms are organized into two categories: supervised learning and unsupe
 - CART
 
 ## Future plans
-- [ ] Random Forest
+- [X] Random Forest
 - [ ] RNNs
 - [ ] Gradient Boosting
 - [ ] CUDA optimizations
