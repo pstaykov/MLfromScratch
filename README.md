@@ -9,16 +9,24 @@ In this repo you will find implementations of popular ML algorithms from scratch
 The algorithms are implemented in a way that is easy to understand and follow and the algorithms are explained in detail in the markdown files. 
 The algorithms are organized into two categories: supervised learning and unsupervised learning.
 
-### The currently implemented algorithms are:
+### The currently implemented algorithms in Python are:
 - Linear Regression
 - K-means
 - K-Nearest Neighbors
 - CART
+- Random Forest
+
+### The currently implemented algorithms in C are:
+- Linear Regression
+- KNN
+- K-Means
 
 ## Future plans
 - [X] Random Forest
-- [ ] RNNs
 - [ ] Gradient Boosting
+- [ ] RNNs
+- [ ] CNNs
+- [ ] NNs
 - [ ] CUDA optimizations
 - [ ] Transformers
 - [ ] rewrite in C
