@@ -98,7 +98,6 @@ def find_best_split(data):
         else:
             # Categorical feature: optimized split for regression
             # Sort categories by their mean target value, then try contiguous splits
-            # This reduces complexity from O(2^N) to O(N log N)
             category_means = {}
             for val in feature_values:
                 category_means[val] = np.mean(data[data[:, feature] == val, -1])
