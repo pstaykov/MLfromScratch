@@ -14,7 +14,8 @@ The algorithms are organized into two categories: supervised learning and unsupe
 - K-means
 - K-Nearest Neighbors
 - CART
-- Random Forest
+- Random Forest Regression
+- Gradient Boosting Regression
 
 ### The currently implemented algorithms in C are:
 - Linear Regression
@@ -23,7 +24,7 @@ The algorithms are organized into two categories: supervised learning and unsupe
 
 ## Future plans
 - [X] Random Forest
-- [ ] Gradient Boosting
+- [X] Gradient Boosting
 - [ ] RNNs
 - [ ] CNNs
 - [ ] NNs

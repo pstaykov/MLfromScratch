@@ -165,9 +165,10 @@ def build_tree(data, current_depth, max_depth):
     return create_internal_node(best_feature_idx, best_split_value, left_child, right_child, split_type)
 
 
-def predict(sample, node):
+def predict_node(sample, node):
     """
-    Predict the value for a given sample using the decision tree.
+    Predict the value for a given single sample using the decision tree node.
+    (Renamed from `predict` to `predict_node` so the class method can be named `predict`.)
     :param sample: A single data point (numpy array) for which we want to predict
     :param node: The current node in the decision tree (can be an internal node or a leaf node)
     :return: The predicted value for the sample
@@ -179,11 +180,61 @@ def predict(sample, node):
     # Otherwise, traverse down the tree based on the split
     if node.split_type == "categorical":
         if sample[node.feature_idx] in node.split_value:
-            return predict(sample, node.left_child)
+            return predict_node(sample, node.left_child)
         else:
-            return predict(sample, node.right_child)
+            return predict_node(sample, node.right_child)
     else:  # numerical
         if sample[node.feature_idx] <= node.split_value:
-            return predict(sample, node.left_child)
+            return predict_node(sample, node.left_child)
         else:
-            return predict(sample, node.right_child)
+            return predict_node(sample, node.right_child)
+
+
+class regressorTree:
+    """
+    Simple CART regression tree wrapper with fit and predict methods.
+
+    Usage:
+        tree = regressorTree(max_depth=5)
+        tree.fit(X, y)
+        preds = tree.predict(X_new)
+    """
+
+    def __init__(self, max_depth=None):
+        self.max_depth = int(max_depth) if max_depth is not None else int(1e9)
+        self.root = None
+
+    def fit(self, X, y):
+        """
+        Fit the regression tree to data.
+        X: array-like shape (n_samples, n_features)
+        y: array-like shape (n_samples,)
+        Returns self for chaining.
+        """
+        X = np.asarray(X)
+        y = np.asarray(y)
+        if X.ndim == 1:
+            X = X.reshape(-1, 1)
+        if y.ndim != 1:
+            y = y.ravel()
+        if X.shape[0] != y.shape[0]:
+            raise ValueError("X and y must have same number of samples")
+
+        data = np.hstack([X, y.reshape(-1, 1)])
+        self.root = build_tree(data, 0, self.max_depth)
+        return self
+
+    def predict(self, X):
+        """
+        Predict target values for X.
+        If X is a single sample (1D array), returns a scalar. Otherwise returns a 1D numpy array.
+        """
+        X = np.asarray(X)
+        single = False
+        if X.ndim == 1:
+            X = X.reshape(1, -1)
+            single = True
+
+        preds = np.array([predict_node(row, self.root) for row in X])
+        return preds[0] if single else preds
+
