@@ -77,14 +77,78 @@ We compare $$\hat{y}$$ to the true label $y$ using Mean Squared Error: $L = ($\h
 This single number tells us how wrong the network is. The entire goal of training is to make this number as small as possible.
 
 ## Backward Pass
-The backward pass is the opposite of the forward pass. We want to find the gradient of the loss function with respect to each parameter.
-In other words, we want to know: "which weights caused the most error, and in which
-direction should we change them to reduce the error?" The chain rule from calculus tells us that the gradient is the product 
-of the partial derivatives of the loss function with respect to each parameter.
+The backward pass is the opposite of the forward pass. We want to find the gradient of the loss function with respect to each parameter. 
+In other words, we want to know: "which weights caused the most error, and in which direction should we change them to reduce the error?" 
+The chain rule from calculus tells us that the gradient of a composed function is the product of the partial derivatives at each step.
 
-$\frac{\delta L}{\delta z_2} · \sigma'$ is the Output layer delta. 
+---
 
-Starting from the loss, we ask: "how does the loss change if we change $z_2$ by a tiny bit?" 
-This requires two things multiplied together via the chain rule:
-- the derivative of the loss with respect to $z_2$: $\frac{\delta L}{\delta \hat{y}} = 2(\hat{y} - y)$
-- the derivative of the sigmoid function with respect to $z_2$: $\sigma'(z_2) = \sigma(z)\times(1-\sigma(z))$
+### Step 1: Output layer delta: $\delta_2$
+
+Starting from the loss, we ask: "how does the loss change if we change $z_2$ by a tiny bit?" This requires two things multiplied together via the chain rule:
+
+- The derivative of the loss with respect to the prediction $\hat{y}$:
+
+$$\frac{\partial L}{\partial \hat{y}} = 2(\hat{y} - y)$$
+
+- The derivative of the sigmoid with respect to its input $z_2$:
+
+$$\sigma'(z_2) = \sigma(z_2)(1 - \sigma(z_2))$$
+
+Multiplied together, this gives us the output layer delta $\delta_2$ — the "blame signal" for the output layer:
+
+$$\delta_2 = \frac{\partial L}{\partial \hat{y}} \cdot \sigma'(z_2) = 2(\hat{y} - y) \cdot \sigma(z_2)(1-\sigma(z_2))$$
+
+From $\delta_2$ we can immediately compute the gradients for $W_2$ and $b_2$:
+
+$$\frac{\partial L}{\partial W_2} = \delta_2 \otimes a_1 \qquad \frac{\partial L}{\partial b_2} = \delta_2$$
+
+where $\otimes$ denotes the outer product — pairing every element of $\delta_2$ with every element of $a_1$.
+
+---
+
+### Step 2 — Propagate error back to the hidden layer
+
+We now ask: "how much did each hidden neuron contribute to the output error?" We route $\delta_2$ backwards through $W_2$ using its transpose:
+
+$$\frac{\partial L}{\partial a_1} = W_2^\top \cdot \delta_2$$
+
+Each hidden neuron receives a share of the blame proportional to how strongly it was connected to each output neuron.
+
+---
+
+### Step 3 — Hidden layer delta: $\delta_1$
+
+The hidden activations $a_1$ came through a ReLU. ReLU's derivative is a simple gate: 1 where the neuron was active during the forward pass, 0 where it was off. Neurons that output zero contributed nothing to the error, so they receive no gradient:
+
+$$\text{ReLU}'(z_1) = \begin{cases} 1 & \text{if } z_1 > 0 \\ 0 & \text{if } z_1 \leq 0 \end{cases}$$
+
+Multiplying element-wise gives us $\delta_1$:
+
+$$\delta_1 = \frac{\partial L}{\partial a_1} \odot \text{ReLU}'(z_1) = (W_2^\top \cdot \delta_2) \odot \text{ReLU}'(z_1)$$
+
+where $\odot$ denotes element-wise multiplication.
+
+---
+
+### Step 4 — Gradients for $W_1$ and $b_1$
+
+With $\delta_1$ in hand, the gradients for the first layer follow the same pattern as Step 1:
+
+$$\frac{\partial L}{\partial W_1} = \delta_1 \otimes x \qquad \frac{\partial L}{\partial b_1} = \delta_1$$
+
+---
+
+### Step 5 — SGD parameter update
+
+With all gradients computed, every parameter is nudged in the direction that reduces the loss. For learning rate $\eta$:
+
+$$\theta \leftarrow \theta - \eta \cdot \frac{\partial L}{\partial \theta}$$
+
+Applied to each parameter:
+
+$$W_1 \leftarrow W_1 - \eta \cdot \frac{\partial L}{\partial W_1}, \quad b_1 \leftarrow b_1 - \eta \cdot \frac{\partial L}{\partial b_1}$$
+
+$$W_2 \leftarrow W_2 - \eta \cdot \frac{\partial L}{\partial W_2}, \quad b_2 \leftarrow b_2 - \eta \cdot \frac{\partial L}{\partial b_2}$$
+
+We subtract because we want to move *downhill* on the loss surface — opposite to the direction the gradient points.
