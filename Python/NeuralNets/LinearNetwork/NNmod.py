@@ -12,13 +12,13 @@ def relu(x):
 def sigmoid(x):
     return 1 / (1 + np.exp(-x))
 
-
 data = np.array([[1.0, 0.5], [1.3, 2.4], [0.8, 1.2], [0.5, 1.7], [1.1, 1.5]])
 labels = np.array([a * b for a, b in data])
 
 # n_hidden neuron hidden layer according to 2 inputs (3 by 2 matrix)
 n_hidden = 10
-W1 = np.array([[a, b] for a, b in zip(np.random.randn(n_hidden), np.random.randn(n_hidden))])
+n_inputs = len(data[0])
+W1 = np.array([[a for a in np.random.randn(n_inputs)] for _ in range(n_hidden)])
 b1 = np.array([a for a in np.random.randn(n_hidden)])
 
 # 1 neuron output layer according to 3 inputs (1 by 3 matrix)
