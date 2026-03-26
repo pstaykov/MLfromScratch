@@ -1,74 +1,96 @@
 """
 this was written by me
+This has hardcoded 2 input neurons but the number of hidden neurons can be changed. The output neuron is also hardcoded.
 """
 
 import numpy as np
 
-def relu(x):
-    return max(0, x)
+class Relu:
+    def __init__(self):
+        self.x = None
 
+    def forward(self, x):
+        self.x = x
+        return np.maximum(0, x)
 
-def sigmoid(x):
-    return 1 / (1 + np.exp(-x))
+    def backward(self, dL_dy):
+        return dL_dy * (self.x > 0) # chain Rule. Multiply with previous layer's gradient'
 
+class Sigmoid:
+    def __init__(self):
+        self.x = None
+
+    def forward(self, x):
+        self.x = 1 / (1 + np.exp(-x))
+        return self.x
+
+    def backward(self, dL_dy):
+        return dL_dy * self.x * (1 - self.x)
+
+class LinearLayer:
+    def __init__(self, input_dim, output_dim):
+        self.W = np.random.randn(input_dim, output_dim) * 0.1
+        self.b = float(np.zeros_like(output_dim))
+
+    def forward(self, x):
+        self.x = x
+        return np.dot(x, self.W) + self.b
+
+    def backward(self, dL_dy):
+        self.dL_dW = np.outer(self.x, dL_dy)
+        self.dL_db = dL_dy
+        return np.dot(dL_dy, self.W.T)
+
+    def update(self, lr):
+        self.W -= lr * self.dL_dW
+        self.b -= lr * self.dL_db
 
 data = np.array([[1.0, 0.5], [1.3, 2.4], [0.8, 1.2], [0.5, 1.7], [1.1, 1.5]])
 labels = np.array([a * b for a, b in data])
 
-# 3 neuron hidden layer according to 2 inputs (3 by 2 matrix)
-W1 = np.array([[0.2, -0.5], [0.4, -0.9], [0.1, 0.9]])
-b1 = np.array([0.5, -0.3, 0.2])
+class NeuralNetwork():
+    def __init__(self, n_inputs, n_hidden, n_outputs):
+        self.hidden_layer = LinearLayer(n_inputs, n_hidden)
+        self.relu = Relu()
+        self.output_layer = LinearLayer(n_hidden, n_outputs)
+        self.sigmoid = Sigmoid()
 
-# 1 neuron output layer according to 3 inputs (1 by 3 matrix)
-W2 = np.array([0.1, -0.3, 0.5])
-b2 = np.array([0.3])
+    def forward(self, x):
+        hidden_output = self.hidden_layer.forward(x)
+        relu_hidden_output = self.relu.forward(hidden_output)
+        output = self.output_layer.forward(relu_hidden_output)
+        sigmoid_output = self.sigmoid.forward(output)
+        return output
 
-learning_rate = 0.01
+    def backward(self, dL_dyhat):
+        grad = self.sigmoid.backward(dL_dyhat)
+        grad = self.output_layer.backward(grad)
+        grad = self.relu.backward(grad)
+        grad = self.hidden_layer.backward(grad)
+        return grad
 
-for i in range(2000):
-    preds = []
+    def update(self, lr):
+        self.hidden_layer.update(lr)
+        self.output_layer.update(lr)
 
-    # Accumulate gradients across all samples
-    dL_dW1_total = np.zeros_like(W1)
-    dL_db1_total = np.zeros_like(b1)
-    dL_dW2_total = np.zeros_like(W2)
-    dL_db2_total = np.zeros_like(b2)
+data   = np.array([[1.0, 0.5], [1.3, 2.4], [0.8, 1.2], [0.5, 1.7], [1.1, 1.5]])
+labels = np.array([a * b for a, b in data])
 
-    for sample, true_label in zip(data, labels):
-        # Forward propagation
-        z1 = np.dot(W1, sample) + b1
-        a1 = np.array([relu(val) for val in z1])
-        z2 = np.dot(W2, a1) + b2
-        pred = sigmoid(z2)
-        preds.append(pred)
+net = NeuralNetwork(n_inputs=2, n_hidden=4, n_outputs=1)
+lr  = 0.01
 
-        # Backward propagation (assuming MSE loss function)
-        dL_dyhat = 2 * (pred - true_label)
-        dsigmoid = sigmoid(z2) * (1 - sigmoid(z2))
-        delta2 = dL_dyhat * dsigmoid  # scalar
+for epoch in range(300):
+    total_loss = 0
 
-        dL_dW2 = delta2 * a1  # scalar * vector → shape (3,)
-        dL_db2 = delta2  # scalar
+    for x, y in zip(data, labels):
+        pred = net.forward(x).squeeze()
 
-        dL_da1 = delta2 * W2  # scalar × vector → shape (3,)
+        loss = (pred - y) ** 2
+        dL_dyhat = 2 * (pred - y)
+        total_loss += loss
 
-        delta1 = dL_da1 * (z1 > 0)  # element-wise, shape (3,)
+        net.backward(dL_dyhat)
+        net.update(lr)
 
-        dL_dW1 = np.outer(delta1, sample)  # outer product → shape (3, 2)
-        dL_db1 = delta1  # shape (3,)
-
-        dL_dW1_total += dL_dW1
-        dL_db1_total += dL_db1
-        dL_dW2_total += dL_dW2
-        dL_db2_total += dL_db2
-
-    preds = np.array(preds)
-    loss = np.mean((preds - labels) ** 2)
-    print(f"Loss after iteration {i+1}: {loss}")
-
-    # Update weights and biases (averaged over samples)
-    n = len(data)
-    W1 = W1 - learning_rate * dL_dW1_total / n
-    b1 = b1 - learning_rate * dL_db1_total / n
-    W2 = W2 - learning_rate * dL_dW2_total / n
-    b2 = b2 - learning_rate * dL_db2_total / n
+    if (epoch + 1) % 20 == 0:
+        print(f"Epoch {epoch+1}, Loss: {total_loss / len(data):.4f}")
