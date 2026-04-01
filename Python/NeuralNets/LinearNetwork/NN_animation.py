@@ -31,7 +31,7 @@ X_grid = np.column_stack((X1.ravel(), X2.ravel()))
 X = X_grid
 
 # Create a linear relation: z = 0.5 * x1 + 0.3 * x2 + 10
-# Normalize z to be between 0 and 1 for sigmoid output (using a simple scaling for now)
+# Normalize z to be between 0 and 1 for sigmoid output (using a simple scaling)
 # Since inputs are up to 100, we need to be careful with the sigmoid range
 # Let's normalize X for training and use it for labels
 X_norm = X / 100.0
