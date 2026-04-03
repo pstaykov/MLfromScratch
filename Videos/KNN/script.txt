@@ -1,0 +1,21 @@
+Hello, welcome to our educational video on K-Nearest Neighbors, commonly known as KNN. In this video, we'll explore what KNN is, how it works, and why it's one of the simplest yet powerful machine learning algorithms.
+
+Let's start with the basics. Imagine you're at a party and you want to guess the music preference of a new person based on the music preferences of the people around them. If most of the people near this new person like pop music, you might guess that this new person also likes pop music. This is essentially how KNN works.
+
+KNN is a supervised machine learning algorithm used for classification and regression. It's called 'K-Nearest Neighbors' because it looks at the K closest data points (neighbors) to make a prediction.
+
+Now, let's dive into the mathematics behind KNN. The first step is to calculate the distance between the data points. The most common distance metric is the Euclidean distance, which is the straight-line distance between two points in Euclidean space. For two points P and Q in n-dimensional space, the Euclidean distance d(P, Q) is given by the square root of the sum of the squared differences of their coordinates.
+
+But how do we choose the right K? Choosing the right number of neighbors is crucial. If K is too small, the model might be too sensitive to noise in the data. If K is too large, the model might be too generalized and not capture the local patterns. A common approach is to use cross-validation to find the optimal K.
+
+Let's look at an example. Suppose we have a dataset with two features: age and income, and we want to classify people into two categories: 'Buys' and 'Does not buy'. We have some training data, and we want to predict the category for a new data point.
+
+First, we calculate the distance between the new data point and all the training data points. Then, we find the K nearest neighbors. If K is 3, we look at the 3 closest points. If most of these points are in the 'Buys' category, we predict that the new data point is also in the 'Buys' category.
+
+KNN has several advantages. It's simple to understand and implement, and it doesn't make any assumptions about the data. However, it also has some disadvantages. It can be computationally expensive, especially with large datasets, and it's sensitive to the scale of the data.
+
+In real-world applications, KNN is used in various fields such as recommendation systems, image recognition, and medical diagnosis.
+
+That's it for our overview of KNN. We hope this video has given you a good understanding of how KNN works and its applications.
+
+Thank you for watching!
