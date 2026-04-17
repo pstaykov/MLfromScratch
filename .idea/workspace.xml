@@ -3,35 +3,31 @@
   <component name="AutoImportSettings">
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
+  <component name="CMakeProjectFlavorService">
+    <option name="flavorId" value="CMakePlainProjectFlavor" />
+  </component>
+  <component name="CMakeSettings">
+    <configurations>
+      <configuration PROFILE_NAME="Debug" ENABLED="true" CONFIG_NAME="Debug" />
+    </configurations>
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="09bc2c4e-0509-41ca-9da3-412b9c9ba9d2" name="Changes" comment="CNN backward">
-      <change afterPath="$PROJECT_DIR$/Python/NeuralNets/RNNs/RNN.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Python/NeuralNets/RNNs/RNN.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Python/Supervised/LinearRegression/test.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Videos/KNN/animation.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Videos/KNN/script.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_21_03_26,_14_06_[Changes]/shelved.patch" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_21_03_26__14_06__Changes_.xml" beforeDir="false" />
+    <list default="true" id="44320f49-1380-46a9-946f-7b726366d67e" name="Changes" comment="gitignore">
+      <change afterPath="$PROJECT_DIR$/Python/ProbabilityLM/ProbabiltyLM.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Python/ProbabilityLM/ProbablityLM.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Python/NeuralNets/RNNs/RNN.py" beforeDir="false" afterPath="$PROJECT_DIR$/Python/NeuralNets/RNNs/RNN.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="CopilotPersistence">
-    <persistenceIdMap>
-      <entry key="_C:/Users/pstay/code/ML/FromScratch" value="39gIVypqgV1V0wVpsLyEvLPY840" />
-    </persistenceIdMap>
-  </component>
-  <component name="CopilotUserSelectedModel">
-    <selectedModels>
-      <entry key="chat-panel" value="Auto" />
-      <entry key="agent-panel" value="Auto" />
-    </selectedModels>
+  <component name="ClangdSettings">
+    <option name="formatViaClangd" value="false" />
   </component>
   <component name="EmbeddingIndexingInfo">
-    <option name="cachedIndexableFilesCount" value="401" />
+    <option name="cachedIndexableFilesCount" value="49" />
     <option name="fileBasedEmbeddingIndicesEnabled" value="true" />
   </component>
   <component name="FileTemplateManagerImpl">
@@ -50,208 +46,158 @@
     &quot;assignee&quot;: &quot;pstaykov&quot;
   }
 }</component>
-  <component name="GithubDefaultAccount">
-    <option name="defaultAccountId" value="f824a142-e505-4bb3-8d47-df9fb23992fe" />
-  </component>
   <component name="GithubPullRequestsUISettings">{
   &quot;selectedUrlAndAccountId&quot;: {
     &quot;url&quot;: &quot;https://github.com/pstaykov/MLfromScratch.git&quot;,
-    &quot;accountId&quot;: &quot;f824a142-e505-4bb3-8d47-df9fb23992fe&quot;
+    &quot;accountId&quot;: &quot;d34d56fc-38f0-4cff-ad82-8b7f70cc4738&quot;
   }
 }</component>
+  <component name="MacroExpansionManager">
+    <option name="directoryName" value="88kalrO3" />
+  </component>
   <component name="McpProjectServerCommands">
     <commands />
     <urls />
   </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
+  </component>
   <component name="ProjectColorInfo">{
-  &quot;associatedIndex&quot;: 4
+  &quot;associatedIndex&quot;: 6
 }</component>
-  <component name="ProjectId" id="39gIVypqgV1V0wVpsLyEvLPY840" />
+  <component name="ProjectId" id="3A2dpqESXwlBp9RSsIOeHdNiRxK" />
+  <component name="ProjectStatusUIService">{
+  &quot;uiKindId&quot;: &quot;Widget&quot;
+}</component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
-    &quot;Python.CNN.executor&quot;: &quot;Run&quot;,
-    &quot;Python.DecisionTreeRegressor.executor&quot;: &quot;Run&quot;,
-    &quot;Python.Linreg.executor&quot;: &quot;Run&quot;,
-    &quot;Python.NN.executor&quot;: &quot;Run&quot;,
-    &quot;Python.NN_animation.executor&quot;: &quot;Run&quot;,
-    &quot;Python.NNmod.executor&quot;: &quot;Run&quot;,
-    &quot;Python.k-means.executor&quot;: &quot;Run&quot;,
-    &quot;Python.knn.executor&quot;: &quot;Run&quot;,
-    &quot;Python.run_plot_test.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.MCP Project settings loaded&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.typescript.service.memoryLimit.init&quot;: &quot;true&quot;,
-    &quot;ai.playground.ignore.import.keys.banner.in.settings&quot;: &quot;true&quot;,
-    &quot;com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
-    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
-    &quot;junie.onboarding.icon.badge.shown&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/pstay/code/ML/FromScratch/Videos/KNN&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable&quot;,
-    &quot;to.speed.mode.migration.done&quot;: &quot;true&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "C/C++ File.treeRegressor.c - Default.executor": "Run",
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "Python.GradientBoostMseReg.executor": "Run",
+    "Python.NN.executor": "Run",
+    "Python.NNmod.executor": "Run",
+    "Python.ProbablityLM.executor": "Run",
+    "Python.RNN.executor": "Run",
+    "RunOnceActivity.MCP Project settings loaded": "true",
+    "RunOnceActivity.RadMigrateCodeStyle": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
+    "RunOnceActivity.cidr.known.project.marker": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "RunOnceActivity.readMode.enableVisualFormatting": "true",
+    "RunOnceActivity.typescript.service.memoryLimit.init": "true",
+    "ai.playground.ignore.import.keys.banner.in.settings": "true",
+    "cf.first.check.clang-format": "false",
+    "cidr.known.project.marker": "true",
+    "com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1": "true",
+    "git-widget-placeholder": "master",
+    "junie.onboarding.icon.badge.shown": "true",
+    "last_opened_file_path": "/Users/pstaykov/CLionProjects/MLfromScratch",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "org.rust.first.attach.projects": "true",
+    "settings.editor.selected.configurable": "com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable",
+    "to.speed.mode.migration.done": "true",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\pstay\code\ML\FromScratch\Videos\KNN" />
-      <recent name="C:\Users\pstay\code\ML\FromScratch\Supervised\CART\ClassificationTree" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\pstay\code\ML\FromScratch\Unsupervised\K-Means" />
-      <recent name="C:\Users\pstay\code\ML\FromScratch\Unsupervised" />
-      <recent name="C:\Users\pstay\code\ML\FromScratch" />
-      <recent name="C:\Users\pstay\code\ML\FromScratch\Supervised\LinearRegression" />
-      <recent name="C:\Users\pstay\code\ML\FromScratch\Supervised\KNN" />
+      <recent name="$PROJECT_DIR$/Python/Supervised" />
     </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="treeRegressor.c - Default" type="CppFileRunConfiguration" factoryName="CppFileRunConfiguration" nameIsGenerated="true" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="MLfromScratch" TARGET_NAME="treeRegressor.c - Default" CONFIG_NAME="treeRegressor.c - Default">
+      <option name="sourceFile" value="$PROJECT_DIR$/C/Supervised/CART/RegressionTree/treeRegressor.c" />
+      <option name="toolchainName" value="Default" />
+      <method v="2">
+        <option name="com.jetbrains.cidr.cpp.runfile.CppFileBuildBeforeRunTaskProvider$BasicBuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
   </component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-js-predefined-d6986cc7102b-9b0f141eb926-JavaScript-PY-253.32098.74" />
-        <option value="bundled-python-sdk-1cd77e80b48f-6d6dccd035ac-com.jetbrains.pycharm.pro.sharedIndexes.bundled-PY-253.32098.74" />
+        <option value="bundled-js-predefined-d6986cc7102b-9b0f141eb926-JavaScript-PY-253.29346.142" />
+        <option value="bundled-python-sdk-f2b7a9f6281b-6e1f45a539f7-com.jetbrains.pycharm.pro.sharedIndexes.bundled-PY-253.29346.142" />
       </set>
     </attachedChunks>
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="09bc2c4e-0509-41ca-9da3-412b9c9ba9d2" name="Changes" comment="" />
-      <created>1771111317266</created>
+      <changelist id="44320f49-1380-46a9-946f-7b726366d67e" name="Changes" comment="" />
+      <created>1771794785319</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1771111317266</updated>
-      <workItem from="1771111318277" duration="2619000" />
-      <workItem from="1771274346730" duration="128000" />
-      <workItem from="1771620364871" duration="792000" />
-      <workItem from="1771670705921" duration="138000" />
-      <workItem from="1771706686493" duration="481000" />
-      <workItem from="1771751088384" duration="459000" />
-      <workItem from="1771772160915" duration="1297000" />
-      <workItem from="1771773540770" duration="4946000" />
-      <workItem from="1772466715440" duration="3000" />
-      <workItem from="1772552793874" duration="668000" />
-      <workItem from="1772730502792" duration="38000" />
-      <workItem from="1773863962893" duration="4101000" />
-      <workItem from="1774095569471" duration="9502000" />
-      <workItem from="1774173444810" duration="2140000" />
-      <workItem from="1774470320659" duration="31000" />
-      <workItem from="1774470426746" duration="6000" />
-      <workItem from="1774880121842" duration="95000" />
-      <workItem from="1774974474919" duration="3235000" />
-      <workItem from="1774985993718" duration="3826000" />
-      <workItem from="1774990582910" duration="287000" />
-      <workItem from="1774990881529" duration="102000" />
-      <workItem from="1775040765733" duration="11543000" />
-      <workItem from="1775059985901" duration="28000" />
-      <workItem from="1775075600279" duration="3115000" />
-      <workItem from="1775220710132" duration="1628000" />
-      <workItem from="1775223841739" duration="5797000" />
+      <updated>1771794785319</updated>
+      <workItem from="1771794787657" duration="1015000" />
+      <workItem from="1771875931211" duration="7069000" />
+      <workItem from="1771932587789" duration="3267000" />
+      <workItem from="1774001387896" duration="4763000" />
+      <workItem from="1774180246589" duration="2119000" />
+      <workItem from="1774530547687" duration="3641000" />
     </task>
-    <task id="LOCAL-00001" summary="Organize into supervised and unsupervised. Save plots. Start implementing CART classification. Document how each algorithm works">
+    <task id="LOCAL-00001" summary="implement kmeans in C">
       <option name="closed" value="true" />
-      <created>1771778079248</created>
+      <created>1771879617169</created>
       <option name="number" value="00001" />
       <option name="presentableId" value="LOCAL-00001" />
       <option name="project" value="LOCAL" />
-      <updated>1771778079248</updated>
+      <updated>1771879617169</updated>
     </task>
-    <task id="LOCAL-00002" summary="find best split and create README.md">
+    <task id="LOCAL-00002" summary="implement gradient boosting in python">
       <option name="closed" value="true" />
-      <created>1771778799204</created>
+      <created>1771933626895</created>
       <option name="number" value="00002" />
       <option name="presentableId" value="LOCAL-00002" />
       <option name="project" value="LOCAL" />
-      <updated>1771778799204</updated>
+      <updated>1771933626896</updated>
     </task>
-    <task id="LOCAL-00003" summary="Neural network Notes. Backprop needs to be finished">
+    <task id="LOCAL-00003" summary="implement n number of inputs">
       <option name="closed" value="true" />
-      <created>1773867819846</created>
+      <created>1774193180249</created>
       <option name="number" value="00003" />
       <option name="presentableId" value="LOCAL-00003" />
       <option name="project" value="LOCAL" />
-      <updated>1773867819846</updated>
+      <updated>1774193180249</updated>
     </task>
-    <task id="LOCAL-00004" summary="finish Neural network Notes.">
+    <task id="LOCAL-00004" summary="gitignore">
       <option name="closed" value="true" />
-      <created>1774096560863</created>
+      <created>1776455797022</created>
       <option name="number" value="00004" />
       <option name="presentableId" value="LOCAL-00004" />
       <option name="project" value="LOCAL" />
-      <updated>1774096560863</updated>
+      <updated>1776455797022</updated>
     </task>
-    <task id="LOCAL-00005" summary="Animation and variable number of hidden neurons">
-      <option name="closed" value="true" />
-      <created>1774174187941</created>
-      <option name="number" value="00005" />
-      <option name="presentableId" value="LOCAL-00005" />
-      <option name="project" value="LOCAL" />
-      <updated>1774174187941</updated>
-    </task>
-    <task id="LOCAL-00006" summary="CNN and CNN forward pass">
-      <option name="closed" value="true" />
-      <created>1775047115596</created>
-      <option name="number" value="00006" />
-      <option name="presentableId" value="LOCAL-00006" />
-      <option name="project" value="LOCAL" />
-      <updated>1775047115596</updated>
-    </task>
-    <task id="LOCAL-00007" summary="CNN backward">
-      <option name="closed" value="true" />
-      <created>1775059679550</created>
-      <option name="number" value="00007" />
-      <option name="presentableId" value="LOCAL-00007" />
-      <option name="project" value="LOCAL" />
-      <updated>1775059679550</updated>
-    </task>
-    <option name="localTasksCounter" value="8" />
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
-  <component name="Vcs.Log.Tabs.Properties">
-    <option name="TAB_STATES">
-      <map>
-        <entry key="MAIN">
-          <value>
-            <State />
-          </value>
-        </entry>
-      </map>
-    </option>
-  </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Organize into supervised and unsupervised. Save plots. Start implementing CART classification. Document how each algorithm works" />
-    <MESSAGE value="find best split and create README.md" />
-    <MESSAGE value="Neural network Notes. Backprop needs to be finished" />
-    <MESSAGE value="finish Neural network Notes." />
-    <MESSAGE value="Animation and variable number of hidden neurons" />
-    <MESSAGE value="CNN and CNN forward pass" />
-    <MESSAGE value="CNN backward" />
-    <option name="LAST_COMMIT_MESSAGE" value="CNN backward" />
+    <MESSAGE value="implement kmeans in C" />
+    <MESSAGE value="implement gradient boosting in python" />
+    <MESSAGE value="implement n number of inputs" />
+    <MESSAGE value="gitignore" />
+    <option name="LAST_COMMIT_MESSAGE" value="gitignore" />
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/FromScratch$run_plot_test.coverage" NAME="run_plot_test Coverage Results" MODIFIED="1771773805221" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/FromScratch$DecisionTreeRegressor.coverage" NAME="DecisionTreeRegressor Coverage Results" MODIFIED="1771751347455" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/FromScratch$NN.coverage" NAME="NN Coverage Results" MODIFIED="1774128559119" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Python/NeuralNets/LinearNetwork" />
-    <SUITE FILE_PATH="coverage/FromScratch$NNmod.coverage" NAME="NNmod Coverage Results" MODIFIED="1774174060018" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Python/NeuralNets/LinearNetwork" />
-    <SUITE FILE_PATH="coverage/FromScratch$NN_animation.coverage" NAME="NN_animation Coverage Results" MODIFIED="1774129873915" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Python/NeuralNets/LinearNetwork" />
-    <SUITE FILE_PATH="coverage/FromScratch$Linreg.coverage" NAME="Linreg Coverage Results" MODIFIED="1771113917901" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/FromScratch$k_means.coverage" NAME="k-means Coverage Results" MODIFIED="1771773642623" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/FromScratch$CNN.coverage" NAME="CNN Coverage Results" MODIFIED="1775060009509" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Python/NeuralNets/CNN" />
-    <SUITE FILE_PATH="coverage/FromScratch$knn.coverage" NAME="knn Coverage Results" MODIFIED="1771772886412" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/MLfromScratch$ProbablityLM.coverage" NAME="ProbablityLM Coverage Results" MODIFIED="1776458533954" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Python/ProbabilityLM" />
+    <SUITE FILE_PATH="coverage/MLfromScratch$NNmod.coverage" NAME="NNmod Coverage Results" MODIFIED="1774181427848" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Python/NeuralNets/LinearNetwork" />
+    <SUITE FILE_PATH="coverage/MLfromScratch$GradientBoostMseReg.coverage" NAME="GradientBoostMseReg Coverage Results" MODIFIED="1771933534596" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Python/Supervised/GradientBoosting" />
+    <SUITE FILE_PATH="coverage/MLfromScratch$RNN.coverage" NAME="RNN Coverage Results" MODIFIED="1776456115735" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Python/NeuralNets/RNNs" />
   </component>
   <component name="github-copilot-workspace">
     <instructionFileLocations>
